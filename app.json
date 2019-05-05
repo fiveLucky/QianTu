@@ -7,19 +7,19 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "乾途羽毛球俱乐部",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#efeff4"
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#ff5200",
+    "selectedColor": "#1296db",
     "borderStyle": "black",
     "backgroundColor": "#fafafa",
     "list": [{
         "pagePath": "pages/Activity/index",
-        "iconPath": "images/order.png",
-        "selectedIconPath": "images/orderActive.png",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activityActive.png",
         "text": "活动",
         "selected": false
       },
@@ -31,5 +31,6 @@
         "selected": false
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -12,6 +12,8 @@
 	"appid": "wxb2bd73c838a66078",
 	"projectname": "QianTu%E7%BE%BD%E6%AF%9B%E7%90%83",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
