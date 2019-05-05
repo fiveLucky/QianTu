@@ -3,7 +3,6 @@
     "pages/Activity/index",
     "pages/Mine/index"
   ],
-  "bak": [],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1296db",
