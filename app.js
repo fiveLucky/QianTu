@@ -1,5 +1,7 @@
 App({
-  OnLaunch: () => {
-    wx.showToast('哈哈哈哈')
+  onLaunch: () => {
+    wx.showToast({
+      title: '哈哈哈哈'
+    })
   }
 })
