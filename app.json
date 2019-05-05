@@ -6,9 +6,9 @@
   "bak": [],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "乾途羽毛球俱乐部",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "乾途羽毛球",
+    "navigationBarTextStyle": "white",
     "backgroundColor": "#efeff4"
   },
   "tabBar": {
