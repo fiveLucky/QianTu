@@ -1,9 +1,8 @@
 
 // TODO 剥离 config mock 配置功能
 import Promise from './promise';
-import ween from './ween';
+import w from './w';
 import URL from '../config/url';
-import Logger from './Logger';
 
 import {
   STORAGE_KEY,
@@ -14,7 +13,6 @@ import {
 } from '../config/const';
 
 const app = getApp();
-const log = new Logger('request');
 
 Promise.prototype.finally = function (callback) {
   const P = this.constructor;
@@ -77,7 +75,7 @@ function request(option) {
   }
   header.ws_app_source = 'WX_APP';
 
-  const userinfo = ween.getStorageSync(STORAGE_KEY.USERINFO);
+  const userinfo = w.getStorageSync(STORAGE_KEY.USERINFO);
   if (!userinfo) {
     app.login();
     return promise;
@@ -96,7 +94,7 @@ function request(option) {
   option.url = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'traceId=' + traceId;
 
   if (loading) {
-    ween.showLoading({
+    w.showLoading({
       title: '加载中...',
       mask: true
     });
@@ -111,12 +109,9 @@ function request(option) {
     }
   }
 
-  log.log('request', {
-    url: option.url,
-    param: option.data
-  });
+
   return new Promise((resolve, reject) => {
-    ween.request(option).then(res => {
+    w.request(option).then(res => {
       if (res.statusCode === 200) {
         // 服务器返回结果处理，包含业务成功和失败
         const data = res.data;
@@ -156,13 +151,12 @@ function request(option) {
       };
       toastHandle(data);
       reject(data);
-      log.dot().log('response_err', res);
     }).finally(() => {
       if (onlyOnce) {
         delete onlyOnceMap[url];
       }
       if (loading) {
-        ween.hideLoading();
+        w.hideLoading();
       }
     });
   });
