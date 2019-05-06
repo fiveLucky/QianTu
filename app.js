@@ -1,7 +1,8 @@
 App({
+  ENV: 'mock',
   onLaunch: () => {
     wx.showToast({
-      title: '打羽毛球身体好',
+      title: 'have fun',
       image: './images/fun.png'
     })
   }

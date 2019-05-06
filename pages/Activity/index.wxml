@@ -1,3 +1,18 @@
+<import src="../../components/Item/index.wxml" />
+
 <view class="container">
+  <view class="header">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{dateList}}">
+        <swiper-item>
+          <text>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
  
 </view>
+
+<template is="item"  data="{{...item}}" />

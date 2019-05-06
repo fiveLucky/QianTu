@@ -75,13 +75,13 @@ function request(option) {
   }
   header.ws_app_source = 'WX_APP';
 
-  const userinfo = w.getStorageSync(STORAGE_KEY.USERINFO);
-  if (!userinfo) {
-    app.login();
-    return promise;
-  }
-  header.token = userinfo.token;
-  header.deviceid = userinfo.mobilePhone;
+  // const userinfo = w.getStorageSync(STORAGE_KEY.USERINFO);
+  // if (!userinfo) {
+  //   app.login();
+  //   return promise;
+  // }
+  // header.token = userinfo.token;
+  // header.deviceid = userinfo.mobilePhone;
 
   if (onlyOnce) {
     if (onlyOnceMap[url]) {

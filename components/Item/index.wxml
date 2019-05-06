@@ -1,0 +1,7 @@
+<template name="item">
+  <view>
+    <view>{{text}}</view>
+    <view>i9878978787</view>
+  </view>
+
+</template>
